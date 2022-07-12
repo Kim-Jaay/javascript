@@ -10,7 +10,94 @@
 
 
 <body>
+
+    <pre>
+        let a = 1;  
+        let b = '1';
+        let c = 'true';
+        let d = true;
+        let e;
+        let f = null;
+
+        console.log( a, b, c, d, e, f );
+
+        => 1 '1' 'true' true undefined null
+    </pre>
+    <hr>
+    <pre>
+        console.log(
+            typeof (a),
+            typeof (b),
+            typeof (c),
+            typeof (d),
+            typeof (e),
+            typeof (f),
+        );
+
+        let _this = this;
+        console.log(_this, typeof (_this), _this.document);
+
+        => number string string boolean undefined object
+    </pre>
+    <hr>
+    <pre>
+        let TA = 0;
+        let TB = ''; //공백은 true
+        let TC = false;
+        let TD = !false;
+        let TE = null;
+        let TF = undefined;
+
+        console.log(
+            Boolean(TA),
+            Boolean(TB),
+            Boolean(TC),
+            Boolean(TD),
+            Boolean(TE),
+            Boolean(TF),
+        );
+
+        => false false false true false false
+    </pre>
+    <hr>
+    <pre>
+        const 객체 = {
+            name: 'jay',
+            age: 26,
+            job: function () {
+                console.log('student')
+            }
+        }
+
+        console.log(객체.name, 객체['name']);
+
+
+        => jay jay
+    </pre>
+    <hr>
+    <pre>
+        const 배열 = [1, 2, 3, 4, 5];
+
+        console.log(배열[0]);
+
+        => 1
+    </pre>
+    <hr>
+    <pre>
+        const 함수 = function () {
+            return '나는 함수'
+        }
+        console.log(함수());
+        
+        => 나는 함수
+    </pre>
+
+
+
+
+
     <div id="box">I'm a box.</div>
+
     <script>
         let a = 1;
         let b = '1';

@@ -9,6 +9,72 @@
 </head>
 
 <body>
+    <pre>
+        let 참 = true;
+        let 거짓 = false;
+        const a = '제이' 
+
+
+
+        console.log(참, 거짓);
+        => true false
+
+        console.log(!참, !거짓);
+        => false true
+
+        console.log(참 && 거짓, 참 && 참, 거짓 && 거짓); 
+        => false true false
+
+        console.log(거짓 || 참, 거짓 || 거짓);
+        =>true false
+    </pre>
+    <hr>
+    <pre>
+        let 참 = true;
+        let 거짓 = false;
+        const a = '제이' 
+
+
+
+        a ? console.log(a + ' 진실한 너') : console.log('못된 놈')
+        => 제이 진실한 너
+
+        a && console.log(a + ' 진실한 너');
+        => 제이 진실한 너
+    </pre>
+    <hr>
+    <pre>
+        let 참 = true;
+        let 거짓 = false;
+        const a = '제이' 
+
+
+
+        if (!a) {
+            console.log(a + ' 진실한 너')
+        } else {
+            console.log(a + ' 못된 놈')
+        }
+        => 제이 못된 놈
+
+
+        a && console.log(a + ' 진실한 너');
+        => 제이 진실한 너
+
+        if (a) {
+            console.log(a + ' 진실한 너')
+        }
+        => 제이 진실한 너
+
+        a || console.log(' 못된 놈');
+        => nothing
+    </pre>
+    <hr>
+
+
+
+
+
     <script>
         let 참 = true;
         let 거짓 = false;
