@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문02 - if</title>
+</head>
+
+<body>
+
+
+
+
+
+    <h2>잼민이만 들어오는 곳입니다.</h2>
+    <p>당신은 몇살입니까?</p>
+    <input id="input">
+    <button id="btn">click</button>
+    <div id="txt"></div>
+
+    <script>
+        btn.addEventListener('click', function () {
+            console.log('되나?', input.value);
+            let age = input.value;
+            if (age < 10) {
+                txt.innerText = `안돼 돌아가`
+            } else if (age >= 10 && age <= 19) {
+                txt.innerText = `hi 잼민아`
+            } else if (age > 19 && age < 40) {
+                txt.innerText = `아저씨 이러시면 안돼요...`
+            } else if (age > 40) {
+                txt.innerText = `할아버지 안녕하세요.`
+            }
+        })
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
