@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 01 - 개발자 객체</title>
+</head>
+
+<body>
+    <div id="App">객체 만들기</div>
+    <div id="This">객체 만들기</div>
+
+
+
+    <script>
+        //1. 객체 리터럴 표기법을 이용한 객체의 생성
+        const jay = {
+            name: 'jay',
+            age: 26,
+        }
+
+        console.log(jay.name + '바보')
+
+
+
+        //2. 객체 생성자함수를 이용한 객체의 생성
+        const KimJay = new Object();
+        KimJay.name = 'KimJay';
+        KimJay.age = 26;
+
+        console.log(KimJay);
+
+
+
+        //3. 객체의 매소드 : 객체는 속성(property)
+        const LeeJay = {
+            name: 'LeeJay',
+            job: function () {
+                console.log(LeeJay.name + 'student')
+            }
+        }
+        console.log(LeeJay['name'], LeeJay.name)
+        LeeJay.job();
+
+
+
+        //4. 객체에서의 this
+        const ParkJay = {
+            name: 'ParkJay',
+            age: 19,
+            job: function () {
+                console.log(`${this.name}
+                와 함께 공부하기`)
+            }
+        }
+        ParkJay.job();
+
+
+
+        //5. 객체의 메소드로 ()=> 화살표함수를 쓰면 this는?
+        const Jay = {
+            name: 'Jay',
+            age: 19,
+            job: () => {
+                console.log(`${Jay.name}와 함께 공부하기`)
+            }
+        }
+        Jay.job();
+
+
+
+        //6. 일반적인 함수(무명)에서의 this 바인딩
+        const Kim = {
+            name: 'Jay',
+            job: function () {
+                setInterval(() => {
+                    console.log(this.name + 'study')
+                }, 1000)
+            }
+        }
+        Kim.job();
+
+
+
+
+        //etc. eventlistener 에서의 this
+        //id는 바로 선택이 가능하지만 권장x 
+        //document.querySelector('#App'), doucment.getElementById('App')
+
+        App.addEventListener('click', function () {
+            console.log(this) //eventlistener function에서의 this 는 app
+        })
+
+        This.addEventListener('click', () => {
+            console.log(this) //화살표 함수에서 this는 window
+        })
+
+        console.log(this, name) //this 는 window
+    </script>
+</body>
+
+</html>
