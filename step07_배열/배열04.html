@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 04</title>
+    <style>
+        h1 {
+            background: #f1f1f1;
+            padding: 30px 0;
+            text-align: center;
+            border-radius: 40px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <MARQUEE>
+        <h1>🧨배열을 공부합니다.04</h1>
+    </MARQUEE>
+    <ul id="UL"></ul>
+
+
+    <script>
+        //indexOf 으로 index 반환하기
+        const 그냥배열 = ['하나', '둘', '셋', '넷', '다섯'];
+        const 숫자배열 = [10, 28, 4, 38, 61, 45]
+
+        const idx = 그냥배열.indexOf('셋');
+        console.log(idx);
+
+        const 있는가 = 그냥배열.includes('넷');
+        console.log(있는가);
+
+        const 찾기 = 그냥배열.find(el => el === '다섯');
+        console.log(찾기);
+
+        const 찾기2 = 숫자배열.find(el => el > 12);
+        console.log(찾기2);
+
+        const 찾기3 = 숫자배열.filter(el => el > 12);
+        console.log(찾기3);
+
+        const 배열자르기 = 그냥배열.slice(0, 3)
+        console.log(배열자르기);
+
+        const 배열순서바꾸기 = [...그냥배열].reverse(); //배열자체의 순서를 바꾼다.
+        console.log(배열순서바꾸기);
+        console.log(그냥배열);
+
+
+    </script>
+</body>
+
+</html>

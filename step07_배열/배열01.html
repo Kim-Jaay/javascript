@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 01</title>
+    <style>
+        h1 {
+            background: #f1f1f1;
+            padding: 30px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+
+
+<body>
+    <MARQUEE direction="up">
+        <h1>배열을 공부합니다.</h1>
+    </MARQUEE>
+
+    <script>
+        //1. 배열을 선언하는 옛날 방법
+        const 구배열 = new Array();
+        구배열[3] = 1;
+        구배열.unshift('히히') //배열 첫번째 요소
+        구배열.push('하하하') //배열 마지막요소
+        구배열.shift(); //첫번째 배열 삭제
+        구배열.pop(); //마지막 배열 삭제
+
+        console.log(구배열);
+        console.log(구배열[3]);
+
+
+
+        //2. 배열을 만드는 요즘 방법
+        const 배열 = [];
+        배열[0] = 1;
+
+        console.log(배열);
+    </script>
+</body>
+
+</html>

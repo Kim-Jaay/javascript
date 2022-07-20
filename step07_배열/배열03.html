@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 03</title>
+    <style>
+        h1 {
+            background: #f1f1f1;
+            border-radius: 30px;
+            padding: 30px 40px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <MARQUEE>
+        <h1>💻 배열을 공부합니다. 03 - forEach</h1>
+    </MARQUEE>
+    <div id="tabMenu">
+        <ul class="tMenu">
+            <li>menu01</li>
+            <li>menu02</li>
+            <li>menu03</li>
+        </ul>
+        <div class="tContent">
+            <div>content01</div>
+            <div>content02</div>
+            <div>content03</div>
+        </div>
+    </div>
+
+
+    <script>
+        const 걍배열 = [
+            { id: 1, content: '올때 메로나' },
+            { id: 2, content: '올때 하겐다즈' },
+            { id: 3, content: '올때 누가바' },
+            { id: 4, content: '올때 쌍쌍바' },
+            { id: 5, content: '올때 투게더' },
+            { id: 6, content: '올때 빠삐코' },
+            { id: 7, content: '올때 폴라포' },
+        ];
+
+        //배열을 도와주는 함수 01 forEach
+        걍배열.forEach((el, idx, arry) => console.log(el.content, idx, arry));
+
+        const TUL = document.querySelectorAll('.tMenu>li');
+        const TCON = document.querySelectorAll('.tContent>div');
+        console.log(TUL);
+
+        TUL.forEach((el, idx) => {
+            el.addEventListener('click', () => {
+                TUL.forEach(el => el.classList.remove('on'))
+                el.classList.add('on');
+                console.log(idx);
+                TCON.forEach(el => el.classList.remove('on'))
+                TCON[idx].classList.add('on')
+            })
+        })
+
+
+        const 스프레드 = [...TUL];
+        console.log(스프레드);
+
+        const UL = document.querySelector('.tMenu');
+        const LI = [...UL.children];
+        console.log(LI);
+
+        //idexOF()---번호를 반환한다.
+        UL.addEventListener('click', e => {
+            let idx = LI.indexOf(e.target);
+            console.log(idx)
+        })
+
+
+    </script>
+</body>
+
+</html>
